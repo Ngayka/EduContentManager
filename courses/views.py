@@ -1,8 +1,10 @@
 from django.db import models
 from django.http import HttpResponse
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView, CreateView
 
+from courses.forms import TeacherCreationForm
 from courses.models import Teacher, Course, Lesson
 
 
@@ -25,6 +27,18 @@ class TeacherListView(ListView):
 
 class TeacherDetailView(DetailView):
     model = Teacher
+
+class TeacherUpdateView(UpdateView):
+    model = Teacher
+    success_url = reverse_lazy("courses:teacher-detail")
+
+class TeacherDeleteView(DeleteView):
+    model = Teacher
+    success_url = reverse_lazy("courses:teacher-list")
+
+class TeacherCreateView(CreateView):
+    form_class = TeacherCreationForm
+
 
 class CoursesListView(ListView):
     model = Course

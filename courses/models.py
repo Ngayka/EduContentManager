@@ -1,12 +1,16 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.urls import reverse
 
 
 class Teacher(AbstractUser):
     bio = models.TextField(blank=True)
 
     def __str__(self):
-        return self.username
+        return f"{self.username}: {self.first_name} {self.last_name}. {self.bio}"
+
+    def get_absolute_url(self):
+        return reverse("courses:teacher-detail", kwargs={"pk": self.pk})
 
 class Course(models.Model):
     title = models.CharField(max_length=120)
@@ -25,4 +29,4 @@ class Lesson(models.Model):
     video_url = models.URLField(blank=True)
 
     def __str__(self):
-        return self.title
+        return f"{self.title}, {self.content}"
