@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <img class="main-image" src="{% static 'courses/images/main_page.jpg' %}" alt="On-line education platform">
+  <h1 class="text-center">Your space to learn, teach, and grow</h1>
+  <h3 class="text-center">Design courses, connect with learners, and lead with ideas.</h3>
+<ul>
+<p class="text-center">We are proud to offer more than {{ num_courses }} diverse courses for you to explore.</p>
+</ul>
+{% endblock %}

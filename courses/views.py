@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 
-from courses.models import Teacher, Course
+from courses.models import Teacher, Course, Lesson
 
 
 def index(request):
@@ -29,5 +29,16 @@ class TeacherDetailView(DetailView):
 class CoursesListView(ListView):
     model = Course
     context_object_name = "courses"
+
+class CourseDetailView(DetailView):
+    model = Course
+
+class LessonListView(ListView):
+    model = Lesson
+    context_object_name = "lessons"
+    queryset = Lesson.objects.select_related("course")
+
+class LessonDetailView(DetailView):
+    model = Lesson
 
 
