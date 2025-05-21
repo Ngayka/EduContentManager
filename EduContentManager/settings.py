@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -41,6 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #"debug_toolbar",
+    "crispy_forms",
+    "crispy_bootstrap5",
     'courses',
     'django_extensions'
 ]
@@ -107,7 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 AUTH_USER_MODEL = "courses.Teacher"
 
-LOGIN_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = reverse_lazy('courses:index')
+LOGOUT_REDIRECT_URL = reverse_lazy('courses:index')
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
@@ -127,7 +133,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-#CRISPY_TEMPLATE_PACK = "bootstrap5"
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
