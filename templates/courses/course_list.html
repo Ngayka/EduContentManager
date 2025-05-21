@@ -8,8 +8,7 @@
           <div class="card-body">
             <h5 class="card-title">{{ course.title }}</h5>
             <p class="card-text">{{ course.description }}</p>
-            <a href="#" class="card-link">More about course</a>
-            <a href="#" class="card-link">Next course</a>
+            <a href="{% url 'courses:course-detail' pk=course.id %}" class="card-link">More about course</a>
           </div>
         </div>
       {% endfor %}

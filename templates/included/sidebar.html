@@ -1,15 +1,15 @@
 {% block sidebar %}
-<nav class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+<nav class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3" style="background-color: lightgray;">
   <!-- Left side of menu -->
   <ul class="nav nav-underline">
     <li class="nav-item">
-      <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" aria-current="page" href="{% url 'courses:index' %}">Main page</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %} text-dark text-decoration-none" aria-current="page" href="{% url 'courses:index' %}">Main page</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link {% if request.resolver_match.url_name == 'teacher-list' %}active{% endif %}" href="{% url 'courses:teacher-list' %}">Our Teachers</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'teacher-list' %}active{% endif %} text-dark text-decoration-none" href="{% url 'courses:teacher-list' %}">Our Teachers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link {% if request.resolver_match.url_name == 'course-list' %}active{% endif %}" href="{% url 'courses:course-list' %}">Our Courses</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'course-list' %}active{% endif %} text-dark text-decoration-none" href="{% url 'courses:course-list' %}">Our Courses</a>
     </li>
   </ul>
 
@@ -17,16 +17,16 @@
 <ul class="nav">
   {% if user.is_authenticated %}
     <li class="nav-item">
-      <span class="nav-link">User: <a href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></span>
+      <span class="nav-link text-dark text-decoration-none">User: <a class="text-dark text-decoration-none" href="{{ user.get_absolute_url }}">{{ user.get_username }}</a></span>
     </li>
     <li class="nav-item">
       <form class="nav-link" method="post" action="{% url 'logout' %}">
         {% csrf_token %}
-        <button type="submit" class="nav-link btn btn-link p-0 m-0 align-baseline">Logout</button>
+        <button type="submit" class="nav-link btn btn-link p-0 m-0 align-baseline text-dark text-decoration-none">Logout</button>
       </form>
     </li>
   {% else %}
-    <li class="nav-item">
+    <li class="nav-item text-dark text-decoration-none">
       <a class="nav-link" href="{% url 'login' %}?next={{ request.path }}">Login</a>
     </li>
   {% endif %}

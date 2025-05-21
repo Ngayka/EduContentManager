@@ -23,7 +23,7 @@ def index(request):
 class TeacherListView(ListView):
     model = Teacher
     context_object_name = "teachers"
-    paginate_by = 5
+    paginate_by = 6
 
 class TeacherDetailView(DetailView):
     model = Teacher
@@ -37,7 +37,10 @@ class TeacherDeleteView(DeleteView):
     success_url = reverse_lazy("courses:teacher-list")
 
 class TeacherCreateView(CreateView):
+    model = Teacher
     form_class = TeacherCreationForm
+    template_name = "courses/teacher_create.html"
+    success_url = reverse_lazy("courses:teacher-list")
 
 
 class CoursesListView(ListView):
@@ -46,6 +49,13 @@ class CoursesListView(ListView):
 
 class CourseDetailView(DetailView):
     model = Course
+    context_object_name = "course"
+    template_name = 'courses/course_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["lessons"] = self.get_object().lessons.all()
+        return context
 
 class LessonListView(ListView):
     model = Lesson

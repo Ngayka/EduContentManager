@@ -25,7 +25,7 @@ class Course(models.Model):
 class Lesson(models.Model):
     title = models.CharField(max_length=120)
     content = models.TextField(blank=True)
-    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='lessons')
     video_url = models.URLField(blank=True)
 
     def __str__(self):

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>{{ lesson.title }}</h1>
+  <h5>{{ lesson.content }}</h5>
+  {% if lesson.video_url %}
+  <iframe width="560"
+          height="315"
+          src="{{ lesson.video_url}}"
+          style="border: none">Watch the lesson</iframe>
+  {% else %}
+  <p>No video on this lesson</p>
+  {% endif %}
+{% endblock %}

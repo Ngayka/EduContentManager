@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <h3>{{ course.title }}</h3>
+  <h4>{{ course.description }}</h4>
+  {% for teacher in course.teacher.all %}
+  <h3>{{ teacher.first_name }} {{ teacher.last_name }}</h3>
+  {% endfor %}
+  <h1>Lessons:</h1>
+  <ul>{% for lesson in lessons %}
+  <li><a href="{% url 'courses:lesson-detail' pk=lesson.id %}">{{ lesson.title }}</a></li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}
