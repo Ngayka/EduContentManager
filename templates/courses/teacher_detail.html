@@ -20,7 +20,7 @@
         <div class="accordion-body">
           <p>{{ course.description }}</p>
 
-          {% if course.lessons.all %}
+          {% if course.lessons.count %}
             <ul>
               {% for lesson in course.lessons.all %}
                 <li>{{ lesson.title }}</li>

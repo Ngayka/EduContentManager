@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="courses-container" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    {% if courses %}
+      {% for course in courses %}
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+            <a href="#" class="card-link">More about course</a>
+            <a href="#" class="card-link">Next course</a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

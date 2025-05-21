@@ -3,13 +3,13 @@
   <!-- Left side of menu -->
   <ul class="nav nav-underline">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="{% url 'courses:index' %}">Main page</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}" aria-current="page" href="{% url 'courses:index' %}">Main page</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'courses:teacher-list' %}">Our Teachers</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'teacher-list' %}active{% endif %}" href="{% url 'courses:teacher-list' %}">Our Teachers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Our Courses</a>
+      <a class="nav-link {% if request.resolver_match.url_name == 'course-list' %}active{% endif %}" href="{% url 'courses:course-list' %}">Our Courses</a>
     </li>
   </ul>
 
