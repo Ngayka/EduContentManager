@@ -1,10 +1,11 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load crispy_forms_filters %}
 {% block content %}
-  <h1>{{ object|yesno:"Update,Add" }} lesson</h1>
-  <form action="" method="post" novalidate>
-  {% csrf_token %}
-    {{ form|crispy}}
-    <input class="btn btn-primary" type="submit" value="Enter">
+  <h1>Add new lesson</h1>
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input class="btn btn-success primary-light" type="submit" value="Add lesson"/>
+    <br>
   </form>
 {% endblock %}

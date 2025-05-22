@@ -6,6 +6,6 @@
   {% csrf_token %}
 
     <input type="submit" value="Yes" class="btn btn-danger">
+    <a href="{% url 'courses:teacher-detail' object.pk %}" class="btn btn-secondary">No</a>
   </form>
 {% endblock %}
-ml>

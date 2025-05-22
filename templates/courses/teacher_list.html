@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<a style="margin: 10px; text-align: right" href="{% url 'courses:teacher-create' %}">Add new teacher</a>
+<a style="margin-bottom: 20px; display: inline-block;" href="{% url 'courses:teacher-create' %}">Add new teacher</a>
 <div class="row row-cols-1 row-cols-md-3 g-4">
   {% for teacher in teachers %}
     <div class="col">
       <div class="card h-100 text-center">
-        <div class="card-body">
+        <div class="card-body" style="background-color: #e9ecef;">
           <h5 class="card-title">
             <a href="{{ teacher.get_absolute_url }}">
               {{ teacher.first_name }} {{ teacher.last_name }} (username: {{ teacher.username }})
