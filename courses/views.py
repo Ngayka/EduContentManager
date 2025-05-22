@@ -1,4 +1,5 @@
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
@@ -31,13 +32,13 @@ def index(request):
     return render(request, "courses/index.html", context=context)
 
 
-class TeacherListView(ListView):
+class TeacherListView(LoginRequiredMixin, ListView):
     model = Teacher
     context_object_name = "teachers"
     paginate_by = 6
 
 
-class TeacherDetailView(DetailView):
+class TeacherDetailView(LoginRequiredMixin, DetailView):
     model = Teacher
 
 
@@ -62,7 +63,7 @@ class TeacherCreateView(CreateView):
     success_url = reverse_lazy("courses:teacher-list")
 
 
-class CoursesListView(ListView):
+class CoursesListView(LoginRequiredMixin, ListView):
     model = Course
     context_object_name = "courses"
     paginate_by = 4
@@ -82,7 +83,7 @@ class CoursesListView(ListView):
             return Course.objects.all()
 
 
-class CourseDetailView(DetailView):
+class CourseDetailView(LoginRequiredMixin, DetailView):
     model = Course
     context_object_name = "course"
     template_name = "courses/course_detail.html"
@@ -124,13 +125,13 @@ class CourseDeleteView(DeleteView):
     success_url = reverse_lazy("courses:course-list")
 
 
-class LessonListView(ListView):
+class LessonListView(LoginRequiredMixin, ListView):
     model = Lesson
     context_object_name = "lessons"
     queryset = Lesson.objects.select_related("course")
 
 
-class LessonDetailView(DetailView):
+class LessonDetailView(LoginRequiredMixin, DetailView):
     model = Lesson
 
 
