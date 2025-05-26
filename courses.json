@@ -1,0 +1,505 @@
+[
+{
+    "model": "courses.teacher",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$yGWJO9xZGmBcyNISv7s5kQ$dHFfMYd4WKGPKYYe0QykeKOM0BH/ZYz6eqxLAkjQa9o=",
+        "last_login": "2025-05-23T16:17:00.195Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Anna",
+        "last_name": "Thompson",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-20T07:46:12Z",
+        "bio": "Anna is a passionate computer science teacher with over 10 years of experience in Java and Python programming. She enjoys making complex concepts simple and fun for her students.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 2,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-20T08:02:32Z",
+        "is_superuser": false,
+        "username": "branch_mr",
+        "first_name": "John",
+        "last_name": "Branch",
+        "email": "branch@info.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-20T08:02:22Z",
+        "bio": "Something about his enormous intelligence and remarkable work experience",
+        "groups": [],
+        "user_permissions": [
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            21,
+            22,
+            23,
+            24
+        ]
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 3,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-20T16:33:51Z",
+        "is_superuser": false,
+        "username": "Michael_1",
+        "first_name": "Michael",
+        "last_name": "Reyes",
+        "email": "michel@axemple.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-20T16:33:42Z",
+        "bio": "Michael specializes in backend development and database design. He has worked on enterprise-level applications and loves teaching practical coding skills.",
+        "groups": [],
+        "user_permissions": [
+            9,
+            10,
+            11,
+            12,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            17,
+            18,
+            19,
+            20,
+            13,
+            14,
+            15,
+            16
+        ]
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 4,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-20T16:36:20Z",
+        "is_superuser": false,
+        "username": "Sara_1",
+        "first_name": "Sara",
+        "last_name": "Lindberg",
+        "email": "sara@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-20T16:36:14Z",
+        "bio": "Sara has a background in mathematics and software engineering. Her favorite topics to teach are algorithms, data structures, and problem-solving techniques.",
+        "groups": [],
+        "user_permissions": [
+            13,
+            14,
+            15,
+            16
+        ]
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 5,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-21T10:21:57Z",
+        "is_superuser": false,
+        "username": "ann_mel",
+        "first_name": "Anna",
+        "last_name": "Melnyk",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-21T10:21:52Z",
+        "bio": "Passionate English teacher with 10+ years of experience helping students speak fluently and confidently.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 6,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-21T10:22:49Z",
+        "is_superuser": false,
+        "username": "sasha_dev",
+        "first_name": "Oleksandr",
+        "last_name": "Hrytsenko",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-21T10:23:07Z",
+        "bio": "Python & Django enthusiast. Loves building educational platforms that make learning fun and accessible.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 7,
+    "fields": {
+        "password": "12345",
+        "last_login": "2025-05-21T10:23:29Z",
+        "is_superuser": false,
+        "username": "iryna.art",
+        "first_name": "Iryna",
+        "last_name": "Koval",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-05-21T10:23:16Z",
+        "bio": "Creative writing and literature tutor. Helping students discover their voice through storytelling.",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.teacher",
+    "pk": 10,
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$lDO0YVi43EZTOoNTbUD9TN$P6CAugrTiUFHBcj/WCGH8klex+42ngfeqk38hupfp2M=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin1",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin1@info.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-05-23T16:46:43.326Z",
+        "bio": "",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+        "title": "Python basic",
+        "description": "Welcome to the Python Basic course! This course is designed for beginners who want to start their programming journey with one of the most popular and versatile programming languages in the world.\r\n\r\nThroughout this course, you will learn the fundamental concepts of Python programming, including variables, data types, control structures, functions, and basic object-oriented programming. You will get hands-on experience writing Python scripts, working with libraries, and solving real-world problems through coding exercises.\r\n\r\nBy the end of the course, you will be comfortable with writing Python code, understand how to structure programs, and be ready to dive deeper into advanced topics like web development, data science, or automation using Python.\r\n\r\nWhether you aim to become a software developer, data analyst, or simply want to automate tasks, this course will provide you with a strong foundation and practical skills to succeed.",
+        "created_at": "2025-05-20T10:58:35Z",
+        "teacher": [
+            1,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+        "title": "Java Basic",
+        "description": "Welcome to the Java Basic course! This course introduces you to the Java programming language, a powerful, object-oriented language widely used in enterprise applications, Android development, and large-scale systems.\r\n\r\nIn this course, you will learn core Java concepts such as variables, data types, conditional statements, loops, methods, arrays, and the basics of object-oriented programming including classes, objects, inheritance, and polymorphism.\r\n\r\nThe course focuses on writing clean, maintainable Java code and understanding the principles behind software development. You will practice coding with exercises and small projects to reinforce your learning.\r\n\r\nBy completing this course, you will have a solid understanding of Java fundamentals, enabling you to build simple Java applications and prepare for more advanced topics like GUI development, multithreading, and network programming.\r\n\r\nThis course is ideal for beginners who want to start a career in Java development or enhance their programming skills for software engineering.",
+        "created_at": "2025-05-20T08:04:33.396Z",
+        "teacher": [
+            1,
+            2,
+            4
+        ]
+    }
+},
+{
+    "model": "courses.course",
+    "pk": 4,
+    "fields": {
+        "title": "Foundations of Data Analytics: From Data to Insights",
+        "description": "This course provides a comprehensive introduction to data analytics, guiding learners through the essential concepts, tools, and techniques used to transform raw data into actionable insights. Ideal for beginners, the course covers data collection, cleaning, exploration, visualization, and basic statistical analysis using industry-standard tools like Excel, Python, and SQL. By the end of the course, students will be able to conduct simple analyses and present their findings effectively.",
+        "created_at": "2025-05-22T05:11:40.190Z",
+        "teacher": [
+            4,
+            5,
+            7
+        ]
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 1,
+    "fields": {
+        "title": "Functions",
+        "content": "Functions in programming languages",
+        "course": 1,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 2,
+    "fields": {
+        "title": "Introduction to Java and Setup",
+        "content": "Learn what Java is, install the JDK and an IDE, and write your first program.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 3,
+    "fields": {
+        "title": "Variables and Data Types",
+        "content": "Understand how to declare variables and use different data types in Java.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 4,
+    "fields": {
+        "title": "Operators and Expressions",
+        "content": "Learn how to perform operations using arithmetic, relational, and logical operators.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 5,
+    "fields": {
+        "title": "Control Flow: if, else, switch",
+        "content": "Use conditional statements to control the flow of your program.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 6,
+    "fields": {
+        "title": "Loops: for, while, do-while",
+        "content": "Learn how to repeat actions using different types of loops.",
+        "course": 2,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 7,
+    "fields": {
+        "title": "Methods and Parameters",
+        "content": "Understand how to create reusable code using methods and pass data to them.",
+        "course": 2,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 8,
+    "fields": {
+        "title": "Object-Oriented Basics: Classes and Objects",
+        "content": "Learn the core of Java ù how to define classes and create objects.",
+        "course": 2,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 9,
+    "fields": {
+        "title": "Constructors and the this Keyword",
+        "content": "Understand how constructors work and use this to refer to the current object.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 10,
+    "fields": {
+        "title": "Encapsulation and Access Modifiers",
+        "content": "Learn how to protect data and control access using private, public, and getters/setters.",
+        "course": 2,
+        "video_url": "https://www.youtube.com/"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 11,
+    "fields": {
+        "title": "Arrays and ArrayLists",
+        "content": "Store and manage multiple values using arrays and dynamic ArrayLists.",
+        "course": 2,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 12,
+    "fields": {
+        "title": "Strings and String Methods",
+        "content": "Work with text using JavaÆs String class and its useful methods.",
+        "course": 2,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 13,
+    "fields": {
+        "title": "Introduction to Python",
+        "content": "Learn what Python is, install it, and write your first Python script.",
+        "course": 1,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 14,
+    "fields": {
+        "title": "Variables and Data Types",
+        "content": "Understand how to store data in variables and use different data types.",
+        "course": 1,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 15,
+    "fields": {
+        "title": "Operators and Expressions",
+        "content": "Use arithmetic, comparison, and logical operators in your code.",
+        "course": 1,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 16,
+    "fields": {
+        "title": "Conditional Statements: if, elif, else",
+        "content": "Control your programÆs logic with conditions.",
+        "course": 1,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 17,
+    "fields": {
+        "title": "Loops: for and while",
+        "content": "Repeat actions using for and while loops.",
+        "course": 1,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 18,
+    "fields": {
+        "title": "Functions and Parameters",
+        "content": "Write reusable blocks of code with functions and pass values to them.",
+        "course": 1,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 19,
+    "fields": {
+        "title": "Lists and Tuples",
+        "content": "Store and manage collections of items using lists and tuples.",
+        "course": 1,
+        "video_url": "https://www.youtube.com/embed/abc123XYZ"
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 22,
+    "fields": {
+        "title": "Introduction to Classes in Python",
+        "content": "Classes are the foundation of object-oriented programming (OOP) in Python. They allow you to create your own data types that combine attributes (variables) and methods (functions).\r\n\r\nKey Concepts:\r\nClass ù a blueprint for creating objects.\r\n\r\nObject ù an instance of a class.\r\n\r\nAttributes ù variables that store data for the object.\r\n\r\nMethods ù functions that define the behavior of the object.",
+        "course": 1,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 26,
+    "fields": {
+        "title": "Introduction to Data Analytics",
+        "content": "Understand what data analytics is, its importance across industries, and how it's used to drive decision-making. Explore the different types of analytics: descriptive, diagnostic, predictive, and prescriptive.",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 27,
+    "fields": {
+        "title": "Data Collection and Data Types",
+        "content": "Learn where data comes from and how to gather it ethically and effectively. Understand structured vs unstructured data, and the formats commonly used in analytics (CSV, JSON, databases, etc.).",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 28,
+    "fields": {
+        "title": "Data Cleaning and Preprocessing",
+        "content": "Discover common issues in raw data (missing values, duplicates, inconsistencies) and how to clean and prepare it using tools like Excel or Python (pandas). Learn about data normalization and formatting.",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 29,
+    "fields": {
+        "title": "Exploratory Data Analysis (EDA)",
+        "content": "Explore datasets to identify patterns, trends, and anomalies. Practice summarizing data using statistics (mean, median, mode) and creating basic charts to visualize distributions and relationships.",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 30,
+    "fields": {
+        "title": "Introduction to Data Visualization",
+        "content": "Learn the principles of effective data visualization. Use tools like Excel, Tableau, or PythonÆs matplotlib/seaborn to create bar charts, line graphs, scatter plots, and dashboards.",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 31,
+    "fields": {
+        "title": "Basic Statistics for Analytics",
+        "content": "Understand core statistical concepts used in analytics: correlation, standard deviation, probability, and hypothesis testing. Apply these concepts to make sense of real-world data.",
+        "course": 4,
+        "video_url": ""
+    }
+},
+{
+    "model": "courses.lesson",
+    "pk": 32,
+    "fields": {
+        "title": "Using SQL for Data Analysis",
+        "content": "Gain hands-on experience querying databases using SQL. Learn to filter, sort, join, and aggregate data from relational databases to support analytics tasks.",
+        "course": 4,
+        "video_url": ""
+    }
+}
+]
