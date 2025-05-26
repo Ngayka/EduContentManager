@@ -48,3 +48,10 @@ manage course content, and streamline online education delivery.
 To run this project, you will need to add the following environment variable to your `.env` file:
 SECRET_KEY=your-secret-key
 DEBUG=True
+
+## Installation
+
+To install the required dependencies:
+
+```bash
+pip install -r requirements.txt
