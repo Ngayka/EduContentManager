@@ -53,13 +53,14 @@ To run this project, you will need to add the following environment variable to 
 SECRET_KEY=your-secret-key
 DEBUG=True
 
+
 ## Installation
 
 To install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
-
+```
 ## Deployment on Render
 
 1. Push your project to GitHub
