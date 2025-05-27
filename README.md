@@ -1,5 +1,9 @@
 !!! A file containing the database structure in PDF format is attached to this commit.
 
+login: admin
+password: admin
+
+
 # EduContentManager
 A platform for creating, editing education courses, as well as assigning teachers to courses, 
 and reassigning teachers to different courses.
