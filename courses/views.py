@@ -95,9 +95,9 @@ class CourseDetailView(LoginRequiredMixin, DetailView):
 
         if form.is_valid():
             content = form.cleaned_data.get("content")
-            lessons = Lesson.objects.filter(content__icontains=content)
+            lessons = Lesson.objects.filter(course=course, content__icontains=content)
         else:
-            lessons = Lesson.objects.all()
+            lessons = Lesson.objects.filter(course=course)
 
         context["course"] = course
         context["lessons"] = lessons
