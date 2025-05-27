@@ -59,3 +59,15 @@ To install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
+
+## Deployment on Render
+
+1. Push your project to GitHub
+2. Create a new Web Service on [Render](https://render.com)
+3. Connect your GitHub repo
+4. Set build and start commands:
+   - **Build command**: `pip install -r requirements.txt`
+   - **Start command**: `gunicorn your_project_name.wsgi`
+5. Add environment variables (`SECRET_KEY`, `DATABASE_URL`, etc.)
+6. (Optional) Add a test user in your admin panel for demo purposes
+
