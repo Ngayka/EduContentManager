@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <h1>
+  Teacher {{ teacher.last_name }} {{ teacher.first_name }}
+    <a href="{% url 'courses:teacher-delete' pk=teacher.id %}" class="btn btn-danger link-to-page">Delete information about this teacher</a>
+    <a href="{% url 'courses:teacher-update' pk=teacher.id %}" class="btn btn-secondary link-to-page">Update information about teacher</a>
+  </h1>
+<h2>All courses taught by {{ teacher.first_name }} {{ teacher.last_name }}</h2>
+<hr>
+<div class="accordion" id="accordionExample">
+  {% for course in teacher.courses.all %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading{{ course.id }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ course.id }}" aria-expanded="false" aria-controls="collapse{{ course.id }}">
+          {{ course.title }}
+        </button>
+      </h2>
+      <div id="collapse{{ course.id }}" class="accordion-collapse collapse" aria-labelledby="heading{{ course.id }}" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>{{ course.description }}</p>
+
+          {% if course.lessons.count %}
+            <ul>
+              {% for lesson in course.lessons.all %}
+                <li>{{ lesson.title }}</li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>No lessons yet</p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

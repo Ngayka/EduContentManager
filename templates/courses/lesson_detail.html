@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-4">
+  <h1 class="mb-3">{{ lesson.title }}</h1>
+  <p class="lead mb-4">{{ lesson.content }}</p>
+
+  {% if lesson.video_url %}
+    <div class="ratio ratio-16x9 mb-4">
+      <iframe
+          src="{{ lesson.video_url }}"
+          title="Lesson video"
+          allowfullscreen
+          style="border: none;">
+      </iframe>
+    </div>
+  {% else %}
+    <p class="text-muted">No video available for this lesson.</p>
+  {% endif %}
+
+  <div class="d-flex gap-2">
+    <a href="{% url 'courses:lesson-update' pk=lesson.id %}" class="btn btn-primary">Edit Lesson</a>
+    <form method="post" action="{% url 'courses:lesson-delete' lesson.pk %}">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">
+        Delete Lesson
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

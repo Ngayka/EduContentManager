@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_filters %}
+{% block content %}
+  <form action="" method="get">
+    {{ search_form|crispy }}
+    <input type="submit" value="Search">
+  </form>
+
+  <a style="margin-bottom: 20px; display: inline-block;" href="{% url 'courses:course-create' %}">Add new course</a>
+  <div class="courses-container" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+    {% if courses %}
+      {% for course in courses %}
+        <div class="card" style="width: 18rem; background-color: #f8f9fa;">
+          <div class="card-body">
+            <h5 class="card-title">{{ course.title }}</h5>
+            <p class="card-text">{{ course.description }}</p>
+            <a href="{% url 'courses:course-detail' pk=course.id %}" class="card-link">More about course</a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

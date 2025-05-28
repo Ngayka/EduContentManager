@@ -1,0 +1,139 @@
+.login-page {
+  position: relative;
+  background-image: url('/static/courses/images/background_picture.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  background-color: purple !important;
+}
+
+.login-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.login-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  padding-left: 5%;
+}
+
+.login-text {
+  flex: 1;
+  max-width: 50%;
+}
+
+.login-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.main-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+.course-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.course-title {
+  font-size: 2rem;
+  margin-bottom: 0.3em;
+  color: #2c3e50;
+}
+
+.course-description {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  color: #555;
+}
+
+.teacher-list {
+  margin-bottom: 2em;
+}
+
+.teacher-list h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.3em 0;
+  color: #34495e;
+}
+
+.lessons-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.lessons-list li {
+  margin-bottom: 0.8em;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+.lessons-list li:hover {
+  background-color: #eaeaea;
+}
+
+.lessons-list a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.lessons-list a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.4em 1em;
+  margin-right: 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+.add-lesson-link {
+  margin-bottom: 20px;
+  display: inline-block;
+}
