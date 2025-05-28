@@ -1,5 +1,10 @@
 !!! A file containing the database structure in PDF format is attached to this commit.
 
+## 🌐 Live Demo
+
+You can check out the deployed version of the project here:  
+[educontentmanager.onrender.com](https://educontentmanager.onrender.com/accounts/login/?next=/)
+
 login: admin
 password: admin
 
